@@ -15,7 +15,7 @@ form.addEventListener('submit', e => {
             // Hide the loading animation
             loadingDiv.style.display = 'none';
 
-            alert(" Success! We’ve got your request. Reply coming your way!");
+            alert(" Success! We’ve got your request. Reply coming to your Mail !");
             window.location.reload(); // Reload the page or redirect as needed
         })
         .catch(error => {
