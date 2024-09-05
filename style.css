@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 /* Header Start */
@@ -8,9 +9,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 5%;
     background-color: lightgrey;
     border-bottom: 1px solid #dee2e6;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .nasc-logo {
@@ -24,59 +26,63 @@ body {
     border-radius: 5px;
 }
 
-.request:hover{
+.request:hover {
     text-decoration: underline;
 }
 /* Header End */
 
 /* Form Starts */
-.form-cont{
+.form-cont {
     width: 90%;
-    margin: 30px auto 0px auto;
+    max-width: 600px;
+    margin: 30px auto;
 }
 
-form> h1{
+form > h1 {
     text-align: center;
 }
 
-form > label{
-    margin: 0px 0px 0px 25%;
+form > label {
+    display: block;
+    margin: 10px 0 5px;
     font-size: 1em;
 }
 
 form > .input{
-    margin:6px 0px 0px 25% ;
-    width: 50%;
-    font-size: 18px;
-    padding: 2px;
-}
-
-form> textarea{
-    resize: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 form > p{
-    font-size: 13px;
-    margin: 0px 0px 0px 25%;
-    width: 70%;
+    margin-top: 0px;
+    margin-bottom: 35px;
 }
 
-#submit{
-    margin: 20px auto;
+form > textarea {
+    resize: none;
+}
+
+form > p {
+    font-size: 13px;
+}
+
+#submit {
     display: block;
-    margin-bottom: 20px;
-    padding: 5px;
-    width: 180px;
-    height: 35px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 50%;
+    max-width: 200px;
     border-radius: 5px;
-    border:1px solid black ;
+    border: 1px solid black;
     cursor: pointer;
     font-size: 16px;
     background-color: lightgray;
-
 }
 
-#submit:hover{
+#submit:hover {
     text-decoration: underline;
 }
 /* Form Ends */
@@ -99,3 +105,27 @@ form > p{
     margin: 0;
 }
 /* Loading Ends */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .nasc-logo {
+        height: 50px;
+    }
+
+    .form-cont {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    form > label,
+    form > p {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    form > .input{
+        width: 100%;
+    }
+
+}
